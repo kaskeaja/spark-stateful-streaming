@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  spark-writer:
+    build: .
+    ports:
+      - "127.0.0.1:4040:4040"  # Spark UI
+    volumes:
+      - ./shared-with-docker:/home/developer/shared_with_host
+  spark-processor:
+    build: .
+    ports:
+      - "127.0.0.1:4041:4040"  # Spark UI
+    volumes:
+      - ./shared-with-docker:/home/developer/shared_with_host
+  jupyter:  # For checking delta-lake manually
+    build: .
+    ports:
+      - "127.0.0.1:8888:8888"  # Jupyter lab
+    volumes:
+      - ./shared-with-docker:/home/developer/shared_with_host
