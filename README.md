@@ -29,6 +29,11 @@ Remove all containers
 docker compose down
 ```
 
+Remove all images
+```
+docker compose down --rmi all
+```
+
 ### Writer
 Start **writer** container in interactive mode
 ```
