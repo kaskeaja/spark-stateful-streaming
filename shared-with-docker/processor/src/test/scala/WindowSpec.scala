@@ -83,27 +83,27 @@ class WindowSpec extends AnyFlatSpec with should.Matchers {
         List(
           new deltaLakeProcessor.IntervalWindow(new Timestamp(0), new Timestamp(0))
         )
-      ), // Zero case*/
+      ), */
       new deltaLakeProcessor.GroupedData(
         new Timestamp(0),
         List(
           new deltaLakeProcessor.IntervalWindow(new Timestamp(0), new Timestamp(0), Some(11.0)),
           new deltaLakeProcessor.IntervalWindow(new Timestamp(0), new Timestamp(1), Some(22.0))
         )
-      ), // First case
+      ),
       new deltaLakeProcessor.GroupedData(
         new Timestamp(3),
         List(
           new deltaLakeProcessor.IntervalWindow(new Timestamp(0), new Timestamp(1), Some(22.0))
         )
-      ), // Third case
+      ),
       new deltaLakeProcessor.GroupedData(
         new Timestamp(6),
         List(
           new deltaLakeProcessor.IntervalWindow(new Timestamp(0), new Timestamp(1), Some(22.0)),
           new deltaLakeProcessor.IntervalWindow(new Timestamp(6), new Timestamp(8), Some(88.0))
         )
-      ), // Fourth case
+      ),
       new deltaLakeProcessor.GroupedData(
         new Timestamp(9),
         List(
@@ -111,20 +111,20 @@ class WindowSpec extends AnyFlatSpec with should.Matchers {
           new deltaLakeProcessor.IntervalWindow(new Timestamp(9), new Timestamp(9), Some(99.0)),
           new deltaLakeProcessor.IntervalWindow(new Timestamp(9), new Timestamp(11), Some(1111.0))
         )
-      ), // Fourth case
+      ),
       new deltaLakeProcessor.GroupedData(
         new Timestamp(12),
         List(
           new deltaLakeProcessor.IntervalWindow(new Timestamp(9), new Timestamp(11), Some(1111.0)),
           new deltaLakeProcessor.IntervalWindow(new Timestamp(12), new Timestamp(12), Some(1212.0))
         )
-      ), // Fifth case
+      ),
       new deltaLakeProcessor.GroupedData(
         new Timestamp(15),
         List(
           new deltaLakeProcessor.IntervalWindow(new Timestamp(12), new Timestamp(12), Some(1212.0))
         )
-      ), // Fifth case
+      ),
     )
     forwardFilled should be (refValueForwardFilled)
 
