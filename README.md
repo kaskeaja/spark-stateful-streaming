@@ -19,7 +19,7 @@ Repository content:
 ## Usage
 
 ### Docker
-Building images
+Building images (add --no-cache to ignore cache if needed)
 ```
 docker compose build
 ```
