@@ -73,7 +73,7 @@ cd shared_with_host/jupyter
 Note:
 * *pyspark_notebook.sh* starts Jupyter lab with PySpark and prints out a link to open Jupyter lab in host system browser.
 * There is a notebook *read_deltalake.ipynb* that you can use to inspect the both breakpoint and processed data.
-* Bokeh plot is written to file *breakpoint_to_equally_sampled.html* in Jupyter folder. You can open the Bokeh plot using a browser or Jupyter lab.
+* [Bokeh](https://bokeh.org/) plot is written to file *breakpoint_to_equally_sampled.html* in Jupyter folder. You can open the Bokeh plot by using a browser or Jupyter lab.
 
 
 ## Tests and linting
